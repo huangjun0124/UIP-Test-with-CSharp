@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4498EC1E-F2CB-463E-A1D3-19FA3EEC588D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Client1</RootNamespace>
+    <AssemblyName>Client1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="fastJSON">
+      <HintPath>..\..\..\..\..\..\..\SourceCode\Main\3Party\fastJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v8.2, Version=8.2.20082.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinTabbedMdi.v8.2, Version=8.2.20082.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\SourceCode\Main\3Party\Infragistics2.Win.UltraWinTabbedMdi.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v8.2, Version=8.2.20082.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\Lib\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.UIProcess">
+      <HintPath>..\Lib\Microsoft.ApplicationBlocks.UIProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPM25.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPM25.Designer.cs">
+      <DependentUpon>FormPM25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectCity.Designer.cs">
+      <DependentUpon>FormSelectCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSupportedCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupportedCity.Designer.cs">
+      <DependentUpon>FormSupportedCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PMItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PMItem.Designer.cs">
+      <DependentUpon>PMItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionDS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegionDS.Designer.cs">
+      <DependentUpon>RegionDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeatherCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WeatherCtl.Designer.cs">
+      <DependentUpon>WeatherCtl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPM25.resx">
+      <DependentUpon>FormPM25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectCity.resx">
+      <DependentUpon>FormSelectCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupportedCity.resx">
+      <DependentUpon>FormSupportedCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PMItem.resx">
+      <DependentUpon>PMItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegionDS.resx">
+      <DependentUpon>RegionDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeatherCtl.resx">
+      <DependentUpon>WeatherCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{3B897290-E698-476F-8C26-2186A48A2091}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_0.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_12.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_13.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_14.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_15.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_17.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_18.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_19.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_20.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_21.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_22.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_23.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_24.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_25.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_26.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_27.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_28.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_30.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_31.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_nothing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_0.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_12.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_13.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_14.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_15.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_17.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_18.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_19.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_20.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_21.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_22.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_23.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_24.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_25.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_26.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_27.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_28.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_30.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_31.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_nothing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nothing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r_b.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r_t1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tem1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tem2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tem3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tem4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tem5.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
